@@ -13,6 +13,7 @@ class Star
   
   void render()
   {
+    strokeWeight(0);
     stroke(255);
     fill(255);
     ellipse(x,y,5,5);
