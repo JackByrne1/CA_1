@@ -3,17 +3,19 @@ class Star
   float x;
   float y;
   float speed;
+  float size;
   
   Star()
   {
     x = random(0, width);
     y = random(0, height);
     speed = random(-5,5);
+    size = random(0,10);
   }
   
   void render()
   {
-    strokeWeight(0);
+    strokeWeight(size);
     stroke(255);
     fill(255);
     ellipse(x,y,5,5);
