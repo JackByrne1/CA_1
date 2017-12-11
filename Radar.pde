@@ -28,7 +28,7 @@ class Radar
     fill(0);
     strokeWeight(3);
     ellipse(cx, cy, radius * 2, radius * 2);
-    stroke(0, 255, 255);
+    stroke(29, 135, 173);
     noFill();
     ellipse(cx, cy, radius * 2, radius * 2);
     int trailLength = 10;

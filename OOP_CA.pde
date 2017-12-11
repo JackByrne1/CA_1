@@ -1,19 +1,31 @@
 ArrayList<Star> stars = new ArrayList<Star>();
 
+ArrayList<Meter> bars = new ArrayList<Meter>();
 void setup() 
 {
   size(500,500);
   background(0,0,0);
+  for(int i = 10; i < 490; i++)
+  {
+    if(i % 10 == 0)
+    {
+      bars.add(new Meter(i,10));
+    }
+  }
+  
   for(int i = 0; i < 100; i++)
   {
     stars.add(new Star());
   }
+  
    radar1 = new Radar(width / 2, 405, 50, 0.5, color(0));
+   
    b1 = new Button(375,400);
    b2 = new Button(375,475);
    b3 = new Button(125,400);
    b4 = new Button(125,475);
 }
+
 Button b4;
 Button b3;
 Button b2;
@@ -32,6 +44,10 @@ void draw()
     p.update();
   }
   
+  for(Meter r : bars)
+  {
+    r.render();
+  }
   
   //Cockpit
   stroke(46, 49, 56);
@@ -51,6 +67,10 @@ void draw()
   line(125,350,0,450);
   line(375,350,500,450);
   line(125,350,375,350);
+  strokeWeight(0);
+  stroke(255);
+  fill(29, 135, 173);
+  rect(5,5,490,135);
   
   radar1.render();
   radar1.update();
@@ -90,6 +110,10 @@ void keyPressed()
         
        case 'a':
         b4.change();
+        for(Meter r : bars)
+        {
+          r.update();
+        }
         break;
     }
   }
