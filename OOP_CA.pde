@@ -2,7 +2,6 @@ ArrayList<Star> stars = new ArrayList<Star>();
 
 void setup() 
 {
-  Star p;
   size(500,500);
   background(0,0,0);
   for(int i = 0; i < 100; i++)
@@ -10,8 +9,10 @@ void setup()
     stars.add(new Star());
   }
    radar1 = new Radar(width / 2, 405, 50, 0.5, color(0, 255, 0));
+   b1 = new Button(10,10);
 }
 
+Button b1;
 Radar radar1;
 
 void draw()
@@ -46,4 +47,9 @@ void draw()
   radar1.render();
   radar1.update();
   
+  b1.render();
 }
+void mousePressed()
+  {
+    b1.change();
+  }
