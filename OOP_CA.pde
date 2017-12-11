@@ -18,7 +18,10 @@ Button b4;
 Button b3;
 Button b2;
 Button b1;
+
 Radar radar1;
+
+Bullet BU1;
 
 void draw()
 {
@@ -56,6 +59,7 @@ void draw()
   b2.render();
   b3.render();
   b4.render();
+  
 }
 void keyPressed()
   {
@@ -79,6 +83,9 @@ void keyPressed()
         
        case 's':
         b3.change();
+        BU1 = new Bullet(width/2, 405);
+        BU1.render();
+        BU1.update();
         break;
         
        case 'a':
