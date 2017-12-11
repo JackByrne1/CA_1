@@ -9,7 +9,10 @@ void setup()
   {
     stars.add(new Star());
   }
+   radar1 = new Radar(width / 2, 405, 50, 0.5, color(0, 255, 0));
 }
+
+Radar radar1;
 
 void draw()
 {
@@ -19,6 +22,7 @@ void draw()
     p.render();
     p.update();
   }
+  
   
   //Cockpit
   stroke(46, 49, 56);
@@ -39,5 +43,7 @@ void draw()
   line(375,350,500,450);
   line(125,350,375,350);
   
+  radar1.render();
+  radar1.update();
   
 }
