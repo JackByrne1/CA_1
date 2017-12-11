@@ -63,13 +63,24 @@ void keyPressed()
     {
       case 'w':
         b1.change();
+        for(Star p :stars)
+        {
+          p.changeSpeed();
+        }
         break;
+        
        case 'd':
         b2.change();
+        for(Star p :stars)
+        {
+          p.returnSpeed();
+        }
         break;
+        
        case 's':
         b3.change();
         break;
+        
        case 'a':
         b4.change();
         break;

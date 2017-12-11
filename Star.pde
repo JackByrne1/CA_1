@@ -34,4 +34,12 @@ class Star
      y = random(0, height);
    }
  }
+ void changeSpeed()
+ {
+   speed = random(-15,15);
+ }
+ void returnSpeed()
+ {
+   speed = random(-5,5);
+ }
 }
