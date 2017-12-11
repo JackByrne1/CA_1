@@ -17,7 +17,7 @@ class Button
   void change()
   {
    stroke(0);
-   fill(192, 198, 17);
+   fill(random(0,255), (random(0,255)), (random(0,255)));
    ellipse(X,Y,20,20);
   }
   

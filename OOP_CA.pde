@@ -8,10 +8,15 @@ void setup()
   {
     stars.add(new Star());
   }
-   radar1 = new Radar(width / 2, 405, 50, 0.5, color(0, 255, 0));
-   b1 = new Button(10,10);
+   radar1 = new Radar(width / 2, 405, 50, 0.5, color(0));
+   b1 = new Button(375,400);
+   b2 = new Button(375,475);
+   b3 = new Button(125,400);
+   b4 = new Button(125,475);
 }
-
+Button b4;
+Button b3;
+Button b2;
 Button b1;
 Radar radar1;
 
@@ -48,8 +53,25 @@ void draw()
   radar1.update();
   
   b1.render();
+  b2.render();
+  b3.render();
+  b4.render();
 }
-void mousePressed()
+void keyPressed()
   {
-    b1.change();
+    switch(key)
+    {
+      case 'w':
+        b1.change();
+        break;
+       case 'd':
+        b2.change();
+        break;
+       case 's':
+        b3.change();
+        break;
+       case 'a':
+        b4.change();
+        break;
+    }
   }

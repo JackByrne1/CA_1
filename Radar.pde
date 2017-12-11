@@ -28,14 +28,13 @@ class Radar
     fill(0);
     strokeWeight(3);
     ellipse(cx, cy, radius * 2, radius * 2);
-    stroke(0, 255, 0);
+    stroke(0, 255, 255);
     noFill();
     ellipse(cx, cy, radius * 2, radius * 2);
     int trailLength = 10;
-    float greenIntensity = 255 / (float)trailLength;
     for(int i = 0 ; i < trailLength ; i ++)
     {
-      stroke(0, i * greenIntensity, 0);
+      stroke(192, 198, 17);
       float x = cx + sin(theta + i * speed) * radius;
       float y = cy -cos(theta + i * speed) * radius;
       line(cx, cy, x, y);
