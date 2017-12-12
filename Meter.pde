@@ -16,7 +16,7 @@ class Meter
   {
     strokeWeight(1);
     stroke(192, 198, 17);
-    fill(192, 198, 17);
+    fill(random(0,255), random(0,255), random(0,255));
     rect(x,y,10,size);
   }
   void update()

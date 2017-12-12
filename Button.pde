@@ -12,6 +12,8 @@ class Button
    stroke(29, 135, 173);
    fill(29, 135, 173);
    ellipse(X,Y,20,20);
+   fill(0);
+   ellipse(X,Y,25,25);
   }
   
   void change()
