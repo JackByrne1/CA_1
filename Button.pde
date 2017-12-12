@@ -9,7 +9,7 @@ class Button
   }
   void render()
   {
-   stroke(0);
+   stroke(29, 135, 173);
    fill(29, 135, 173);
    ellipse(X,Y,20,20);
   }

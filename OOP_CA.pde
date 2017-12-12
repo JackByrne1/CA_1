@@ -44,11 +44,6 @@ void draw()
     p.update();
   }
   
-  for(Meter r : bars)
-  {
-    r.render();
-  }
-  
   //Cockpit
   stroke(46, 49, 56);
   fill(46, 49, 56);
@@ -79,6 +74,11 @@ void draw()
   b2.render();
   b3.render();
   b4.render();
+  
+  for(Meter r : bars)
+  {
+    r.render();
+  }
   
 }
 void keyPressed()
